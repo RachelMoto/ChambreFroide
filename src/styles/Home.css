@@ -82,3 +82,85 @@
   font-weight: bold;
 }
 
+
+/* ================= RESPONSIVE HOME ================= */
+
+@media (max-width: 1024px) {
+  .home-content {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .home-content h1 {
+    font-size: 34px;
+  }
+
+  .home-content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .home-top {
+    top: 15px;
+    left: 15px;
+    gap: 8px;
+  }
+
+  .home-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .home-title {
+    font-size: 22px;
+  }
+
+  .home-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .home-content h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .home-content p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .home-content button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .home-title {
+    font-size: 18px;
+  }
+
+  .home-logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .home-content h1 {
+    font-size: 24px;
+  }
+
+  .home-content p {
+    font-size: 15px;
+  }
+
+  .home-content button {
+    font-size: 15px;
+  }
+
+}
+
