@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/Utilisateur.css";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
 
 function Utilisateurs() {
+  
+  const [telephone, setTelephone] = useState("");
 
   const [users, setUsers] = useState([]);
   const [form, setForm] = useState({
@@ -144,12 +148,15 @@ function Utilisateurs() {
         required
       />
 
-      <input
-        name="telephone"
-        placeholder="Téléphone"
-        value={form.telephone}
-        onChange={handleChange}
-      />
+      <PhoneInput
+  defaultCountry="cd"
+  value={telephone}
+  onChange={(phone) => setTelephone(phone)}
+  inputProps={{
+    placeholder: "Téléphone",
+  }}
+  
+/>
 
       <select
         name="role"
