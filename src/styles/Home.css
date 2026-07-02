@@ -1,0 +1,84 @@
+
+/* CENTER CONTENT */
+.home-content {
+  text-align: center;
+  max-width: 700px;
+}
+
+.home-content h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: blue;
+  font-weight: bold;
+}
+
+.home-content p{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.home-content button {
+  padding: 12px 30px;
+  background: white;
+  border-radius: 8px;
+  color: red;
+  cursor: pointer;
+  font-weight: 900;
+  border: none;
+  
+  
+  
+}
+
+.home-content button:hover {
+  background: #1d4ed8;
+}
+
+
+.home {
+  width: 100vw;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: background-image 1s ease-in-out; /* effet doux */
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.55);
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TOP LEFT */
+.home-top {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-logo {
+  width: 55px;
+  height: 55px;
+}
+
+.home-title {
+  color: blue;
+  font-size: 30px;
+  font-weight: bold;
+}
+

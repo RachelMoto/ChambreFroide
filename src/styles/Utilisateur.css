@@ -1,0 +1,94 @@
+.users-container {
+  padding: 20px;
+}
+
+.users-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.users-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.users-form input,
+.users-form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+.users-form button {
+  grid-column: span 2;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.users-form button:hover {
+  background: #1d4ed8;
+}
+
+.users-list {
+  display: grid;
+  gap: 10px;
+}
+
+.user-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.user-info p {
+  margin: 3px 0;
+}
+
+.user-actions button {
+  margin-left: 5px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-disable {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-enable {
+  background: #22c55e;
+  color: white;
+}
+
+.btn-reset {
+  background: #f59e0b;
+  color: white;
+}
+
+.btn-delete {
+  background: #6b7280;
+  color: white;
+}

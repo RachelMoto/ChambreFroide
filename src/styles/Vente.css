@@ -1,0 +1,262 @@
+.vente-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+/* PRODUITS */
+.produits-section {
+  flex: 2;
+}
+
+.produits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.produit-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-left: 5px solid blueviolet;
+  border-top: 5px solid #0f172a;
+  border-bottom: 5px solid #22c55e;
+}
+
+.produit-card button {
+  margin-top: 10px;
+  padding: 8px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+/* PANIER */
+.panier-section {
+  flex: 1;
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 10px;
+  height: fit-content;
+  border-left: 5px solid orange;
+  border-top: 5px solid green;
+  border-bottom: 5px solid green;
+  border-right: 5px solid orange;
+}
+
+.panier-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.actions button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.actions button:nth-child(1) {
+  background: green;
+  color: white;
+}
+
+.actions button:nth-child(2) {
+  background: orange;
+  color: white;
+}
+
+.actions button:nth-child(3) {
+  background: red;
+  color: white;
+}
+
+.sale-champs{
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  
+}
+
+.sale-champs button{
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+  background: #2563eb;
+  
+}
+
+.total-box{
+  background:#eff6ff;
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+
+
+
+.vente-top {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .vente-top {
+    flex-direction: column;
+  }
+}
+
+/* PRODUITS prend plus de place */
+.produits-section {
+  flex: 2;
+}
+
+/* PANIER plus petit */
+.panier-section {
+  flex: 1;
+}
+
+/* HISTORIQUE en bas */
+.historique-ventes {
+  margin-top: 40px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.sale-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  max-width: 95%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: modalShow 0.3s ease;
+}
+
+.sale-modal h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1f2937;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.sale-champs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sale-champs input {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.sale-champs input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.sale-champs button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sale-champs button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.sale-champs button:active {
+  transform: translateY(0);
+}
+
+/* Fond sombre derrière le modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
+  z-index: 999;
+}
+
+@keyframes modalShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-modal:hover {
+  color: #dc2626;
+}
+
+.actions-vente button:disabled {
+  background: #d1d5db;
+  color: #6b7280;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.actions-vente button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

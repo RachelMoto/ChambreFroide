@@ -1,0 +1,20 @@
+.notif-container{
+  padding:20px;
+}
+
+.notif-card{
+  padding:15px;
+  margin-bottom:10px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.notif-card.unread{
+  background:#e0f2fe;
+  border-left:4px solid #0284c7;
+}
+
+.notif-card.read{
+  background:#f1f5f9;
+}

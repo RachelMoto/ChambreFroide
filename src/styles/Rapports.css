@@ -1,0 +1,213 @@
+/* ============================
+   PAGE
+============================ */
+
+.rapport-page{
+    width:95%;
+    margin:25px auto;
+    background:#ffffff;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    
+}
+
+/* ============================
+   HEADER
+============================ */
+
+.rapport-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:2px solid #ececec;
+    padding-bottom:20px;
+    margin-bottom:25px;
+}
+
+.rapport-header h1{
+    margin:0;
+    color:#0d6efd;
+    font-size:32px;
+}
+
+.rapport-header p{
+    margin-top:8px;
+    color:#666;
+}
+
+.rapport-actions{
+    display:flex;
+    gap:12px;
+}
+
+.rapport-actions button{
+
+    border:none;
+    padding:12px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+
+}
+
+.rapport-actions button:hover{
+    transform:translateY(-2px);
+}
+
+.rapport-actions button:nth-child(1){
+    background:#dc3545;
+}
+
+.rapport-actions button:nth-child(2){
+    background:#198754;
+}
+
+.rapport-actions button:nth-child(3){
+    background:#0f172a;
+}
+
+/* ============================
+   FILTRES
+============================ */
+
+.rapport-filtres{
+    display:flex;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.rapport-filtres button{
+
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#ececec;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.rapport-filtres button:hover{
+
+    background:#0f172a;
+    color:white;
+
+}
+
+/* ============================
+   SECTIONS
+============================ */
+
+.rapport-section{
+
+    margin-top:35px;
+
+}
+
+.rapport-section h2{
+
+    background:#0f172a;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    margin-bottom:15px;
+
+}
+
+/* ============================
+   TABLEAUX
+============================ */
+
+.rapport-section table{
+
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+
+}
+
+.rapport-section th{
+
+    background:#0d6efd;
+    color:white;
+    padding:12px;
+    text-align:left;
+
+}
+
+.rapport-section td{
+
+    padding:12px;
+    border-bottom:1px solid #ececec;
+
+}
+
+.rapport-section tr:hover{
+
+    background:#f7f7f7;
+
+}
+
+/* ============================
+   RESUME
+============================ */
+
+.rapport-resume{
+
+    margin-top:40px;
+    background:#f8f9fa;
+    border-left:4px solid #0f172a;
+    padding:20px;
+    border-radius:10px;
+
+}
+
+.rapport-resume h2{
+
+    margin-top:0;
+    color:#0d6efd;
+
+}
+
+.rapport-resume div{
+
+    display:flex;
+    justify-content:space-between;
+    margin:12px 0;
+    font-size:17px;
+
+}
+
+.rapport-resume strong{
+
+    color:#198754;
+    font-size:18px;
+
+}
+
+/* ============================
+   IMPRESSION
+============================ */
+
+@media print{
+
+    .rapport-actions,
+    .rapport-filtres{
+
+        display:none;
+
+    }
+
+    .rapport-page{
+
+        box-shadow:none;
+        margin:0;
+        width:100%;
+        padding:0;
+
+    }
+
+}

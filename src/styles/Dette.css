@@ -1,0 +1,283 @@
+/* =========================
+   PAGE
+========================= */
+
+.page-container {
+  padding: 25px;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  font-size: 32px;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  margin: 0;
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card span {
+  display: block;
+  margin-top: 12px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* =========================
+   COULEURS DES CARDS
+========================= */
+
+.success {
+  border-left: 5px solid #22c55e;
+  border-top: 5px solid #ef4444;
+}
+
+.mobile {
+  border-left: 5px solid #8b5cf6;
+  border-top: 5px solid #ef4444;
+}
+
+.cash {
+  border-left: 5px solid #06b6d4;
+  border-top: 5px solid #22c55e;
+}
+
+.warning {
+  border-left: 5px solid #f59e0b;
+  border-top: 5px solid #8b5cf6;
+}
+
+.danger {
+  border-left: 5px solid #ef4444;
+  border-top: 5px solid #06b6d4;
+}
+
+/* =========================
+   LISTE
+========================= */
+
+.liste-header {
+  margin-bottom: 20px;
+}
+
+.liste-header h2 {
+  color: #1f2937;
+  margin-bottom: 5px;
+}
+
+.liste-header p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================
+   TABLEAU
+========================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+thead {
+  background: #2563eb;
+  color: white;
+}
+
+th {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+td {
+  padding: 16px;
+  color: #374151;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+  background: #f9fafb;
+}
+
+.no-data {
+  text-align: center;
+  padding: 25px;
+  color: #6b7280;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 15px;
+  }
+
+  .page-header h1 {
+    font-size: 26px;
+  }
+
+  .stats-cards {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.modal-paiement {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-paiement input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn-payer {
+  cursor: pointer;
+}
+
+.dette-row {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dette-row:hover {
+  background: #f5f5f5;
+}
+
+.dette-row td {
+  cursor: pointer;
+}
+
+.card {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  opacity: 0.9;
+}
+
+.dette-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  
+}
+
+.dette-table th,
+.dette-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.dette-table th {
+  background: #2563eb;
+}
+
+.dette-table tr:hover {
+  background: #fafafa;
+}
+
+.dette-section{
+   margin-top: 30px;
+  padding: 20px;
+  background: #ddd;
+  border-radius: 12px;
+}
+
+.dette-table button{
+  background: #2563eb;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+}
+
+.dette-table button:hover{
+  background: #374151;
+}
+

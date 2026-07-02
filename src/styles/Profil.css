@@ -1,0 +1,108 @@
+.profil-container {
+  padding: 30px;
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+/* CARD PRINCIPALE */
+.profil-card {
+  display: flex;
+  gap: 40px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  max-width: 900px;
+  margin: auto;
+  transition: 0.3s;
+}
+
+/* IMAGE PROFIL */
+.profil-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.profil-image img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0f172a;
+}
+
+/* INPUT FILE */
+.profil-image input {
+  width: 100%;
+}
+
+/* BOUTON */
+.profil-image button {
+  background: #0f172a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profil-image button:hover {
+  background: #1e293b;
+}
+
+/* INFOS */
+.profil-info {
+  flex: 1;
+}
+
+.profil-info p {
+  font-size: 16px;
+  margin: 12px 0;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #0f172a;
+}
+
+/* TITRE */
+.profil-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0f172a;
+  font-size: 28px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .profil-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+body.dark-theme .profil-container {
+  background: #0f172a;
+}
+
+body.dark-theme .profil-card {
+  background: #1e293b;
+  color: white;
+}
+
+body.dark-theme .profil-info p {
+  background: #0f172a;
+  color: white;
+  border-left: 4px solid #38bdf8;
+}
+
+body.dark-theme .profil-image button {
+  background: #38bdf8;
+  color: black;
+}
+
+body.dark-theme .profil-image button:hover {
+  background: #0ea5e9;
+}

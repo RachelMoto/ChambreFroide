@@ -1,0 +1,80 @@
+/* ---------- LIGHT ---------- */
+
+body.light-theme{
+
+    background:#f4f6f9;
+    color:#1e293b;
+
+    transition:.3s;
+}
+
+body.light-theme .sidebar{
+
+    background:#0F172A;
+}
+
+body.light-theme .navbar{
+
+    background:white;
+    color:#111827;
+}
+
+body.light-theme .content{
+
+    background:#f4f6f9;
+}
+
+
+/* ---------- DARK ---------- */
+
+body.dark-theme{
+
+    background:#0f172a;
+    color:white;
+
+    transition:.3s;
+}
+
+body.dark-theme .sidebar{
+
+    background:#020617;
+}
+
+body.dark-theme .navbar{
+
+    background:#1e293b;
+    color:white;
+}
+
+body.dark-theme .content{
+
+    background:#0f172a;
+}
+
+body.dark-theme input{
+
+    background:#1e293b;
+    color:white;
+    border:1px solid #334155;
+}
+
+body.dark-theme select{
+
+    background:#1e293b;
+    color:white;
+}
+
+body.dark-theme table{
+
+    color:white;
+}
+
+body.dark-theme .card{
+
+    background:#1e293b;
+}
+
+body.dark-theme button{
+
+    transition:.3s;
+}

@@ -1,0 +1,78 @@
+.approvisionnement-container {
+  padding: 20px;
+}
+
+.approvisionnement-header {
+  margin-bottom: 20px;
+}
+
+.form-approvisionnement {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.form-approvisionnement input,
+.form-approvisionnement select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.btn-approvisionnement {
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.table-container {
+  background: blue;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.approvisionnement-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  
+}
+
+.approvisionnement-table th,
+.approvisionnement-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.approvisionnement-table th {
+  background: #2563eb;
+}
+
+.approvisionnement-table tr:hover {
+  background: #fafafa;
+}
+
+.approvisionnement-section{
+  margin-top: 30px;
+  padding: 20px;
+  background: #ddd;
+  border-radius: 12px;
+}

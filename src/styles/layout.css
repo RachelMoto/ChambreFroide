@@ -1,0 +1,20 @@
+.app-layout {
+  display: flex;
+}
+
+.app-main {
+  flex: 1;
+  margin-left: 260px; /* sidebar */
+}
+
+.layout{
+    display: flex;
+    height: 100vh;
+}
+
+.app-content {
+  margin-top: 70px; /* navbar */
+  padding: 20px;
+  background: #f3f4f6;
+  min-height: 100vh;
+}
