@@ -1,3 +1,17 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -15,7 +29,8 @@ body {
 }
 
 .login-box {
-  width: 1000px;
+  width:min(1000px,95%);
+  max-width:95%;
   height: 600px;
 
   display: flex;
@@ -46,7 +61,16 @@ body {
 .logo-title {
   display: flex;
   align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
   
+}
+@media (max-width: 768px) {
+  .logo-title {
+    justify-content: center;
+  }
 }
 
 .logo {
@@ -94,6 +118,7 @@ body {
   border-right: 5px solid #111827;
   border-top: 5px solid #111827;
   border-bottom: 5px solid #111827;
+  overflow:hidden;
 }
 
 .login-form {
@@ -108,7 +133,8 @@ body {
 }
 
 .login-form input {
-  width: 100%;
+  width:100%;
+  max-width:100%;
   padding: 14px;
 
   margin-bottom: 15px;
@@ -188,7 +214,7 @@ body {
   .login-box {
     flex-direction: column;
     width: 100%;
-    height: auto;
+    min-height: auto;
   }
 
   .login-left,
@@ -222,6 +248,7 @@ body {
 
   .logo-title {
     justify-content: center;
+    text-align: center;
   }
 
 }
@@ -254,6 +281,11 @@ body {
   .google-btn {
     padding: 12px;
     font-size: 15px;
+  }
+
+  .left-content {
+    text-align: center;
+    align-items: center;
   }
 
 }

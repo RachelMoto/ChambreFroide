@@ -153,6 +153,13 @@ const openCashSale = () => {
   setShowModal(true);
 };
 
+const telephoneValide = (telephone) => {
+  const chiffres = telephone.replace(/\D/g, "");
+
+  // RDC : indicatif 243, il faut au moins quelques chiffres après
+  return chiffres.length > 3;
+};
+
   // Vente crédit
   const handleCreditSale = async () => {
 
@@ -191,6 +198,7 @@ const openCreditSale = () => {
 };
 
 const confirmSale = async () => {
+
   if (panier.length === 0) {
     alert("Ajoute des produits au panier");
     return;
@@ -201,9 +209,44 @@ const confirmSale = async () => {
     return;
   }
 
-  if (saleType === "CREDIT" && client.acompte <= 0) {
-    alert("Acompte obligatoire pour une vente crédit");
+  if (!telephoneValide(client.telephone)) {
+  alert("Veuillez saisir un numéro de téléphone valide.");
+  return;
+}
+
+  // Récupération de l'acompte une seule fois
+  const acompte = Number(client.acompte || 0);
+
+// Vérification du nom
+if (!client.prenom.trim()) {
+  alert("Le nom du client est obligatoire.");
+  return;
+}
+
+// Vérification du téléphone
+const chiffres = client.telephone.replace(/\D/g, "");
+
+if (chiffres.length <= 3) {
+  alert("Veuillez saisir un numéro de téléphone valide.");
+  return;
+}
+
+if (saleType === "CREDIT") {
+
+  if (acompte <= 0) {
+    alert("Acompte obligatoire pour une vente crédit.");
     return;
+  }
+
+  if (acompte > total) {
+    alert(
+      "L'acompte ne peut pas être supérieur au montant total à payer."
+    );
+    return;
+  }
+
+
+
   }
 
   const confirmation = window.confirm(
