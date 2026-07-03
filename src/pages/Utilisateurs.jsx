@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../services/api";
 import "../styles/Utilisateur.css";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 
 function Utilisateurs() {
-  
+
   const [telephone, setTelephone] = useState("");
 
   const [users, setUsers] = useState([]);
@@ -28,8 +28,8 @@ function Utilisateurs() {
   };
 
   const fetchUsers = async () => {
-    const res = await axios.get(
-      "http://localhost:3001/api/users",
+    const res = await api.get(
+      "/users",
       config
     );
     setUsers(res.data);
@@ -52,8 +52,8 @@ function Utilisateurs() {
     console.log(JSON.parse(localStorage.getItem("user")));
     console.log("Données envoyées :", form);
 
-    await axios.post(
-      "http://localhost:3001/api/users",
+    await api.post(
+      "/users",
       form,
       config
     );
@@ -72,8 +72,8 @@ function Utilisateurs() {
   };
 
   const disableUser = async (id) => {
-    await axios.put(
-      `http://localhost:3001/api/users/disable/${id}`,
+    await api.put(
+      `/users/disable/${id}`,
       {},
       config
     );
@@ -81,8 +81,8 @@ function Utilisateurs() {
   };
 
   const enableUser = async (id) => {
-    await axios.put(
-      `http://localhost:3001/api/users/enable/${id}`,
+    await api.put(
+      `/users/enable/${id}`,
       {},
       config
     );
@@ -96,8 +96,8 @@ function Utilisateurs() {
 
   if (!ok) return;
   
-    await axios.put(
-      `http://localhost:3001/api/users/reset-password/${id}`,
+    await api.put(
+      `/users/reset-password/${id}`,
       {},
       config
     );
@@ -105,8 +105,8 @@ function Utilisateurs() {
   };
 
   const deleteUser = async (id) => {
-    await axios.delete(
-      `http://localhost:3001/api/users/${id}`,
+    await api.delete(
+      `/users/${id}`,
       config
     );
     fetchUsers();

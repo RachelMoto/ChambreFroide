@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../services/api";
 import "../styles/Message.css";
 
 
@@ -31,8 +31,8 @@ function Messages() {
 
   const loadUsers = async () => {
     try {
-      const res = await axios.get(
-  "http://localhost:3001/api/messages/users",
+      const res = await api.get(
+  "/messages/users",
   config
 );
 
@@ -49,8 +49,8 @@ function Messages() {
 
   const loadConversation = async (otherUserId) => {
     try {
-      const res = await axios.get(
-        `http://localhost:3001/api/messages/${otherUserId}`,
+      const res = await api.get(
+        `/messages/${otherUserId}`,
         config
       );
 
@@ -66,8 +66,8 @@ function Messages() {
     if (!selectedUser) return;
 
     try {
-      await axios.post(
-        "http://localhost:3001/api/messages/send",
+      await api.post(
+        "/messages/send",
         {
           receiverId: selectedUser.id,
           content,

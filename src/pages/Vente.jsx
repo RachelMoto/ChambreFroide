@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../services/api";
 import { getProduits } from "../services/produitService";
 import { createVente, getVentes } from "../services/venteService";
 import "../styles/Vente.css";
@@ -258,8 +258,8 @@ if (saleType === "CREDIT") {
   }
 
   try {
-    const res = await axios.post(
-      "http://localhost:3001/api/ventes",
+    const res = await api.post(
+      "/ventes",
       {
         client: {
           prenom: client.prenom,

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../services/api";
 import "../styles/Caisse.css";
 
 const Caisse = () => {
@@ -15,14 +15,13 @@ const Caisse = () => {
       const token = localStorage.getItem("token");
       console.log(token);
 
-      const res = await axios.get(
-        "http://localhost:3001/api/caisse",
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const res = await api.get("/caisse",
+  {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+);
 
       setCaisse(res.data);
     } catch (error) {

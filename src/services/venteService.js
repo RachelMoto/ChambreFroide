@@ -1,8 +1,7 @@
-import axios from "axios";
+import api from "./api";
 
-const API = "http://localhost:3001/api/ventes";
+export const getVentes = () => api.get("/ventes");
 
-export const getVentes = () => axios.get(API);
-
-export const createVente = (data) =>
-  axios.post(API, data);
+export const createVente = (data) => {
+  return api.post("/ventes", data);
+};

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import api from "../services/api";
 import { useNavigate } from "react-router-dom";
 import "../styles/ResetPassword.css";
 
@@ -13,8 +13,8 @@ function ResetPassword() {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.put(
-        "http://localhost:3001/api/auth/change-password",
+      await api.put(
+        "/auth/change-password",
         { password },
         {
           headers: {

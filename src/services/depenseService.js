@@ -1,10 +1,7 @@
-import axios from "axios";
+import api from "./api"; 
 
-const API =
-  "http://localhost:3001/api/depenses";
+export const getDepenses = () =>api.get("/depenses");
 
-export const getDepenses = () =>
-  axios.get(API);
-
-export const createDepense = (data) =>
-  axios.post(API, data);
+export const createDepense = (data) => {
+  return api.post("/depenses", data);
+};

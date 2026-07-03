@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from "../services/api";
 import { useState, useEffect } from "react";
 import { exportRapportPDF } from "../utils/exportRapport";
 import "../styles/Rapports.css";
@@ -38,8 +38,8 @@ function Rapports() {
     try {
       console.log(token);
 
-      const res = await axios.get(
-        "http://localhost:3001/api/rapports?type=daily",
+      const res = await api.get(
+        "/rapports?type=daily",
         config
       );
       console.log("REPONSE BACKEND:", res.data);

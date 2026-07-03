@@ -1,9 +1,13 @@
-import axios from "axios";
+import api from "./api";
 
-const API ="http://localhost:3001/api/commandes";
+export const getCommandes = () => {
+  return api.get("/commandes");
+};
 
-export const getCommandes = () =>axios.get(API);
+export const createCommande = (data) => {
+  return api.post("/commandes", data);
+};
 
-export const createCommande = (data) =>axios.post(API, data);
-
-export const updateCommande = (id,data) => axios.put(`${API}/${id}`,data);
+export const updateCommande = (id, data) => {
+  return api.put(`/commandes/${id}`, data);
+};

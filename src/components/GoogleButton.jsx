@@ -1,6 +1,6 @@
 import { GoogleLogin }
 from "@react-oauth/google";
-import axios from "axios";
+import api from "../services/api";
 import { useNavigate }
 from "react-router-dom";
 
@@ -14,13 +14,12 @@ function GoogleButton() {
 
     try {
 
-      const res = await axios.post(
-        "http://localhost:3001/api/auth/google",
-        {
-          token:
-            credentialResponse.credential,
-        }
-      );
+      const res = await api.post(
+  "/auth/google",
+  {
+    token: credentialResponse.credential,
+  }
+);
 
       localStorage.setItem(
         "token",

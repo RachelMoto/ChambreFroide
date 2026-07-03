@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import api from "../services/api";
 import Profile from "../assets/Profile-removebg.png";
 import "../styles/Profil.css";
 
@@ -29,8 +29,8 @@ function Profil() {
     const formData = new FormData();
     formData.append("image", image);
 
-    const res = await axios.put(
-      "http://localhost:3001/api/users/profile-image",
+    const res = await api.put(
+      "/users/profile-image",
       formData,
       {
         ...config,

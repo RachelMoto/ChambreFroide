@@ -1,10 +1,7 @@
-import axios from "axios";
 import api from "./api";
 
-const API = "http://localhost:3001/api/produits";
-
 // Liste des produits (publique)
-export const getProduits = () => axios.get(API);
+export const getProduits = () => api.get("/produits");
 
 // Ajouter un produit
 export const createProduit = (data) =>

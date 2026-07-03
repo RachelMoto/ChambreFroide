@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../services/api";
 
 import {
   FaMoneyBillWave,
@@ -36,8 +36,8 @@ function Dashboard() {
 
   const loadVentes = async () => {
     try {
-      const res = await axios.get(
-        "http://localhost:3001/api/ventes"
+      const res = await api.get(
+        "/ventes"
       );
 
       setVentes(res.data);
@@ -48,8 +48,8 @@ function Dashboard() {
 
   const loadProduits = async () => {
     try {
-      const res = await axios.get(
-        "http://localhost:3001/api/produits"
+      const res = await api.get(
+        "/produits"
       );
 
       setProduits(

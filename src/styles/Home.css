@@ -166,15 +166,23 @@
 
 @media (max-width:768px){
 
-.home{
+@media (max-width:768px){
 
-    background-size:90%;
+  .home{
+    width:100%;
+    min-height:100vh;
+
+    background-size:cover;
     background-repeat:no-repeat;
-    background-position:center;
+    background-position:center center;
+  }
 
-    background-color:black;
+  .overlay{
+    width:100%;
+    min-height:100vh;
+    padding:20px;
+  }
 
 }
-
 }
 

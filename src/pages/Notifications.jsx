@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../services/api";
 import "../styles/Notification.css";
 
 function Notifications() {
@@ -19,8 +19,8 @@ function Notifications() {
   }, []);
 
   const fetchNotifications = async () => {
-    const res = await axios.get(
-      "http://localhost:3001/api/notifications",
+    const res = await api.get(
+      "/notifications",
       config
     );
 
@@ -28,8 +28,8 @@ function Notifications() {
   };
 
   const markAsRead = async (id) => {
-    await axios.put(
-      `http://localhost:3001/api/notifications/${id}/read`,
+    await api.put(
+      `/notifications/${id}/read`,
       {},
       config
     );

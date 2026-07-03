@@ -1,3 +1,4 @@
+import api from "../services/api";
 import { useEffect, useState } from "react";
 import { PageContext } from "../context/PageContext";
 import { useContext } from "react";
@@ -33,10 +34,7 @@ useEffect(() => {
   const fetchNotifications = async () => {
     try {
 
-      const res = await axios.get(
-        "http://localhost:3001/api/notifications",
-        config
-      );
+      const res = await api.get("/notifications",config);
 
       setNotifications(res.data);
 
@@ -62,8 +60,8 @@ const loadUnreadMessages = async () => {
 
     const token = localStorage.getItem("token");
 
-    const res = await axios.get(
-      "http://localhost:3001/api/messages/unread-count",
+    const res = await api.get(
+      "/messages/unread-count",
       {
         headers: {
           Authorization: `Bearer ${token}`,
