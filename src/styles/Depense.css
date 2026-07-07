@@ -178,3 +178,27 @@ td {
   border-radius: 12px;
 }
 
+.periode-filter{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.periode-filter button{
+  padding:10px 15px;
+  border:2px solid red;
+  border-radius:8px;
+  background:#eee;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.periode-filter button:hover{
+  background:#0c5adb;
+  color:white;
+}
+
+.periode-filter button.active{
+  background:#0c5adb;
+  color:white;
+}

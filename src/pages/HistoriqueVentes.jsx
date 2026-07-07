@@ -62,23 +62,19 @@ const filtrerParPeriode = (liste) => {
 
 const historiqueVenteFiltres = filtrerParPeriode(ventes);
 
-const totalGlobal = historiqueVenteFiltres.reduce((sum, v) => {
+const totalGlobal = historiqueVenteFiltres.reduce((sum, vente) => {
 
-  // 💰 vente comptant
-  if (v.type === "COMPTANT") {
-    return sum + Number(v.montant);
+  // Vente comptant
+  if (vente.type === "COMPTANT") {
+    return sum + Number(vente.montant || 0);
   }
 
-  // 💳 vente crédit → on NE prend PAS le total
-  if (v.type === "CREDIT") {
+  // Vente crédit : on prend uniquement l'acompte initial
+  if (vente.type === "CREDIT") {
 
-    const acompte =
-      v.client?.dettes?.find(
-        (d) =>
-          Number(d.montantTotal) === Number(v.montant)
-      )?.montantPaye || 0;
+    const acompteInitial = Number(vente.acompteInitial || 0)
 
-    return sum + Number(acompte);
+    return sum + Number(acompteInitial);
   }
 
   return sum;
@@ -179,13 +175,8 @@ if (loading) {
             </td>
 
             <td>
-              {Number(
-                vente.client?.dettes?.find(
-                  (d) =>
-                    Number(d.montantTotal) === Number(vente.montant)
-                )?.montantPaye || 0
-              ).toLocaleString()} FC
-            </td>
+  {Number(vente.acompte || 0).toLocaleString()} FC
+</td>
 
             <td>
               {new Date(vente.createdAt).toLocaleDateString()}

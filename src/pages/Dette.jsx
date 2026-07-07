@@ -13,6 +13,7 @@ function Dettes() {
   const [montantPaiement, setMontantPaiement] = useState("");
   const [filter, setFilter] = useState("ALL");
   const [loading, setLoading] = useState(false);
+  const [periode, setPeriode] = useState("JOUR");
 
   const loadDettes = async () => {
     try {
@@ -102,6 +103,42 @@ const confirmPaiement = async () => {
   return true;
 });
 
+const filtrerParPeriode = (liste) => {
+  const aujourdHui = new Date();
+
+  return liste.filter((item) => {
+    const date = new Date(item.createdAt);
+
+    switch (periode) {
+      case "JOUR":
+        return date.toDateString() === aujourdHui.toDateString();
+
+      case "SEMAINE":
+        return (
+          (aujourdHui - date) /
+            (1000 * 60 * 60 * 24) <=
+          7
+        );
+
+      case "MOIS":
+        return (
+          date.getMonth() === aujourdHui.getMonth() &&
+          date.getFullYear() === aujourdHui.getFullYear()
+        );
+
+      case "ANNEE":
+        return (
+          date.getFullYear() === aujourdHui.getFullYear()
+        );
+
+      default:
+        return true;
+    }
+  });
+};
+
+const dettesFiltrees = filtrerParPeriode(dettes);
+
   return (
     <div className="page-container">
 
@@ -145,6 +182,38 @@ const confirmPaiement = async () => {
         </div>
       </div>
 
+      <div className="periode-filter">
+
+  <button
+    className={periode === "JOUR" ? "active" : ""}
+    onClick={() => setPeriode("JOUR")}
+  >
+    Aujourd'hui
+  </button>
+
+  <button
+    className={periode === "SEMAINE" ? "active" : ""}
+    onClick={() => setPeriode("SEMAINE")}
+  >
+    Cette semaine
+  </button>
+
+  <button
+    className={periode === "MOIS" ? "active" : ""}
+    onClick={() => setPeriode("MOIS")}
+  >
+    Ce mois
+  </button>
+
+  <button
+    className={periode === "ANNEE" ? "active" : ""}
+    onClick={() => setPeriode("ANNEE")}
+  >
+    Cette année
+  </button>
+
+</div>
+
       <table className="dette-table">
 
         <thead>
@@ -163,7 +232,7 @@ const confirmPaiement = async () => {
 
           {dettes.length > 0 ? (
 
-            filteredDettes.map((dette) => (
+            dettesFiltrees.map((dette) => (
 
               <tr key={dette.id}>
 

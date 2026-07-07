@@ -245,8 +245,6 @@ if (saleType === "CREDIT") {
     return;
   }
 
-
-
   }
 
   const confirmation = window.confirm(

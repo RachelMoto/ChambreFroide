@@ -12,6 +12,7 @@ function Depense() {
   const [montant, setMontant] = useState("");
   const [categorie, setCategorie] = useState("");
   const [description, setDescription] = useState("");
+  const [periode, setPeriode] = useState("JOUR");
   
 
   useEffect(() => {
@@ -81,13 +82,52 @@ const calculTotal = (list) =>
     0
   );
 
-  const totalDepenses = calculTotal(depenses);
-
   const totalJour = calculTotal(depensesJour);
 
   const totalSemaine = calculTotal(depensesSemaine);
 
   const totalMois = calculTotal(depensesMois);
+
+  const filtrerParPeriode = (liste) => {
+  const aujourdHui = new Date();
+
+  return liste.filter((item) => {
+    const date = new Date(item.createdAt);
+
+    switch (periode) {
+      case "JOUR":
+        return date.toDateString() === aujourdHui.toDateString();
+
+      case "SEMAINE":
+        return (
+          (aujourdHui - date) /
+            (1000 * 60 * 60 * 24) <=
+          7
+        );
+
+      case "MOIS":
+        return (
+          date.getMonth() === aujourdHui.getMonth() &&
+          date.getFullYear() === aujourdHui.getFullYear()
+        );
+
+      case "ANNEE":
+        return (
+          date.getFullYear() === aujourdHui.getFullYear()
+        );
+
+      default:
+        return true;
+    }
+  });
+};
+
+const depensesFiltrees = filtrerParPeriode(depenses);
+
+const totalDepenses = depensesFiltrees.reduce(
+  (sum, d) => sum + Number(d.montant),
+  0
+);
 
   return (
     <div className="depense-container">
@@ -172,6 +212,38 @@ const calculTotal = (list) =>
 
     <div className="depense-section">
       <h2>📊 Historique des depenses</h2>
+
+      <div className="periode-filter">
+
+  <button
+    className={periode === "JOUR" ? "active" : ""}
+    onClick={() => setPeriode("JOUR")}
+  >
+    Aujourd'hui
+  </button>
+
+  <button
+    className={periode === "SEMAINE" ? "active" : ""}
+    onClick={() => setPeriode("SEMAINE")}
+  >
+    Cette semaine
+  </button>
+
+  <button
+    className={periode === "MOIS" ? "active" : ""}
+    onClick={() => setPeriode("MOIS")}
+  >
+    Ce mois
+  </button>
+
+  <button
+    className={periode === "ANNEE" ? "active" : ""}
+    onClick={() => setPeriode("ANNEE")}
+  >
+    Cette année
+  </button>
+
+</div>
       <table className="depense-table">
         <thead>
           <tr>
@@ -184,7 +256,7 @@ const calculTotal = (list) =>
         </thead>
 
         <tbody>
-          {depenses.map((d) => (
+          {depensesFiltrees.map((d) => (
             <tr key={d.id}>
               <td>{d.libelle}</td>
               <td>{d.categorie}</td>
