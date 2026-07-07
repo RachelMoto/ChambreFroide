@@ -260,3 +260,245 @@
   align-items: center;
   gap: 8px;
 }
+
+/* =================================
+   TABLETTE
+================================= */
+
+@media(max-width:1024px){
+
+
+.produits-grid{
+
+  grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.vente-top{
+
+  gap:20px;
+
+}
+
+
+.panier-section{
+
+  padding:15px;
+
+}
+
+
+}
+
+
+/* =================================
+   TELEPHONE
+================================= */
+
+@media(max-width:768px){
+
+
+.vente-container{
+
+  gap:20px;
+
+}
+
+
+
+/* Produits */
+
+.produits-grid{
+
+  grid-template-columns:1fr;
+
+}
+
+
+.produit-card{
+
+  padding:12px;
+
+}
+
+
+
+.produit-card button{
+
+  width:100%;
+
+}
+
+
+
+/* Vente haut */
+
+.vente-top{
+
+  flex-direction:column;
+
+}
+
+
+
+/* Panier */
+
+.panier-section{
+
+  width:100%;
+
+  box-sizing:border-box;
+
+}
+
+
+
+.panier-item{
+
+  flex-direction:column;
+
+  gap:8px;
+
+}
+
+
+
+/* Total */
+
+.total-box{
+
+  padding:15px;
+
+}
+
+
+
+/* Actions */
+
+.actions button,
+.actions-vente button{
+
+  width:100%;
+
+  justify-content:center;
+
+}
+
+
+
+/* Modal */
+
+.sale-modal{
+
+  width:90%;
+
+  padding:20px;
+
+}
+
+
+.sale-modal h3{
+
+  font-size:20px;
+
+}
+
+
+
+.sale-champs input,
+.sale-champs button{
+
+  width:100%;
+
+  box-sizing:border-box;
+
+}
+
+
+
+}
+
+
+
+/* =================================
+   PETITS TELEPHONES
+================================= */
+
+@media(max-width:480px){
+
+
+.vente-container{
+
+  gap:15px;
+
+}
+
+
+.produit-card{
+
+  border-left-width:3px;
+  border-top-width:3px;
+  border-bottom-width:3px;
+
+}
+
+
+.produit-card h3{
+
+  font-size:16px;
+
+}
+
+
+.produit-card p{
+
+  font-size:14px;
+
+}
+
+
+
+.panier-section h2{
+
+  font-size:20px;
+
+}
+
+
+
+.total-box{
+
+  font-size:14px;
+
+}
+
+
+
+.sale-modal{
+
+  width:95%;
+
+  padding:15px;
+
+  border-radius:10px;
+
+}
+
+
+.sale-modal h3{
+
+  font-size:18px;
+
+}
+
+
+.close-modal{
+
+  font-size:22px;
+
+}
+
+
+
+}

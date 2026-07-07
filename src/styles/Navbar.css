@@ -216,3 +216,206 @@ body.dark-mode {
   object-fit:cover;
   margin-right:10px;
 }
+
+/* ===============================
+   TABLETTE
+================================ */
+
+@media(max-width:1024px){
+
+.navbar{
+
+    padding:0 15px;
+
+    gap:10px;
+
+}
+
+
+.navbar-title{
+
+    min-width:auto;
+
+}
+
+
+.navbar-title h2{
+
+    font-size:20px;
+
+}
+
+
+.search-box{
+
+    max-width:350px;
+
+}
+
+
+.profile-info{
+
+    display:none;
+
+}
+
+
+.navbar-actions{
+
+    gap:10px;
+
+}
+
+
+}
+
+
+/* ===============================
+   TELEPHONE
+================================ */
+
+@media(max-width:768px){
+
+
+.navbar{
+
+    height:60px;
+
+    padding:0 10px;
+
+}
+
+
+/* Titre plus petit */
+
+.navbar-title h2{
+
+    font-size:18px;
+
+}
+
+
+
+/* Recherche */
+
+.search-box{
+
+    position:absolute;
+
+    top:65px;
+
+    left:10px;
+
+    right:10px;
+
+    max-width:none;
+
+    width:auto;
+
+}
+
+
+/* Laisse de l'espace sous la navbar */
+
+.navbar{
+
+    margin-bottom:55px;
+
+}
+
+
+
+/* Cache les informations utilisateur */
+
+.profile-info{
+
+    display:none;
+
+}
+
+
+/* Actions */
+
+.navbar-actions{
+
+    gap:8px;
+
+}
+
+
+.icon-box{
+
+    width:38px;
+
+    height:38px;
+
+}
+
+
+.profile-avatar,
+.navbar-avatar{
+
+    width:38px;
+
+    height:38px;
+
+}
+
+
+}
+
+
+/* ===============================
+   PETITS TELEPHONES
+================================ */
+
+@media(max-width:480px){
+
+
+.navbar-title h2{
+
+    font-size:16px;
+
+}
+
+
+.icon-box{
+
+    width:34px;
+
+    height:34px;
+
+}
+
+
+.profile-avatar,
+.navbar-avatar{
+
+    width:34px;
+
+    height:34px;
+
+}
+
+
+/* Cache certains éléments si nécessaire */
+
+.navbar-actions{
+
+    gap:5px;
+
+}
+
+
+.badge{
+
+    width:15px;
+
+    height:15px;
+
+    font-size:9px;
+
+}
+
+
+}

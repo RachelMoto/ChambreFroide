@@ -76,3 +76,206 @@ td {
   background: #ddd;
   border-radius: 12px;
 }
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media(max-width:1024px){
+
+
+.approvisionnement-container{
+
+  padding:15px;
+
+}
+
+
+
+.form-approvisionnement{
+
+  grid-template-columns:repeat(3,1fr);
+
+}
+
+
+
+.approvisionnement-section{
+
+  padding:15px;
+
+}
+
+
+
+}
+
+
+
+/* =========================
+   TELEPHONE
+========================= */
+
+@media(max-width:768px){
+
+
+.approvisionnement-container{
+
+  padding:10px;
+
+}
+
+
+
+/* Header */
+
+.approvisionnement-header h1{
+
+  font-size:24px;
+
+}
+
+
+
+/* Formulaire */
+
+.form-approvisionnement{
+
+  grid-template-columns:1fr;
+
+  gap:10px;
+
+}
+
+
+
+.form-approvisionnement input,
+.form-approvisionnement select{
+
+  width:100%;
+
+  box-sizing:border-box;
+
+}
+
+
+
+.btn-approvisionnement{
+
+  width:100%;
+
+  padding:12px;
+
+}
+
+
+
+/* Section */
+
+.approvisionnement-section{
+
+  margin-top:20px;
+
+  padding:12px;
+
+}
+
+
+
+/* Tableau */
+
+.table-container{
+
+  width:100%;
+
+  overflow-x:auto;
+
+}
+
+
+
+.approvisionnement-table{
+
+  min-width:650px;
+
+}
+
+
+
+.approvisionnement-table th,
+.approvisionnement-table td{
+
+  padding:10px;
+
+  font-size:14px;
+
+}
+
+
+
+}
+
+
+
+/* =========================
+   PETITS TELEPHONES
+========================= */
+
+@media(max-width:480px){
+
+
+.approvisionnement-container{
+
+  padding:8px;
+
+}
+
+
+
+.approvisionnement-header h1{
+
+  font-size:20px;
+
+}
+
+
+
+.form-approvisionnement input,
+.form-approvisionnement select{
+
+  padding:10px;
+
+  font-size:13px;
+
+}
+
+
+
+.btn-approvisionnement{
+
+  font-size:14px;
+
+}
+
+
+
+.approvisionnement-table th,
+.approvisionnement-table td{
+
+  padding:8px;
+
+  font-size:12px;
+
+}
+
+
+
+.approvisionnement-section{
+
+  border-radius:8px;
+
+}
+
+
+
+}

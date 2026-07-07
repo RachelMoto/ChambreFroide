@@ -172,3 +172,259 @@ td {
     gap: 10px;
   }
 }
+
+/* =================================
+   TABLETTE
+================================= */
+
+@media(max-width:1024px){
+
+
+.page-container{
+
+  padding:15px;
+
+}
+
+
+.stats-cards{
+
+  grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.historique-top{
+
+  flex-direction:column;
+
+  align-items:stretch;
+
+}
+
+
+.periode-filter{
+
+  justify-content:flex-start;
+
+}
+
+
+}
+
+
+
+/* =================================
+   TELEPHONE
+================================= */
+
+@media(max-width:768px){
+
+
+.page-container{
+
+  padding:10px;
+
+}
+
+
+
+/* Header */
+
+.page-header h1{
+
+  font-size:22px;
+
+}
+
+
+
+/* Cartes statistiques */
+
+.stats-cards{
+
+  grid-template-columns:1fr;
+
+  gap:15px;
+
+}
+
+
+.card{
+
+  padding:18px;
+
+}
+
+
+.card p{
+
+  font-size:24px;
+
+}
+
+
+
+/* Section caisse */
+
+.caisse-section{
+
+  padding:12px;
+
+  margin-top:20px;
+
+}
+
+
+
+/* Historique */
+
+.historique-top{
+
+  padding:15px;
+
+  margin-top:20px;
+
+  gap:15px;
+
+}
+
+
+.historique-header h2{
+
+  font-size:20px;
+
+}
+
+
+
+/* Filtres */
+
+.periode-filter{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  width:100%;
+
+  gap:8px;
+
+}
+
+
+.periode-filter button{
+
+  width:100%;
+
+  font-size:13px;
+
+}
+
+
+
+/* Tableaux */
+
+.table-container{
+
+  width:100%;
+
+  overflow-x:auto;
+
+}
+
+
+table,
+.caisse-table{
+
+  min-width:650px;
+
+}
+
+
+th,
+td{
+
+  padding:10px;
+
+  font-size:14px;
+
+}
+
+
+}
+
+
+
+/* =================================
+   PETITS TELEPHONES
+================================= */
+
+@media(max-width:480px){
+
+
+.page-container{
+
+  padding:8px;
+
+}
+
+
+.page-header h1{
+
+  font-size:20px;
+
+}
+
+
+
+.card h3{
+
+  font-size:14px;
+
+}
+
+
+.card p{
+
+  font-size:22px;
+
+}
+
+
+
+.historique-top{
+
+  padding:12px;
+
+}
+
+
+.periode-filter{
+
+  grid-template-columns:1fr;
+
+}
+
+
+.periode-filter button{
+
+  font-size:12px;
+
+  padding:8px;
+
+}
+
+
+
+th,
+td{
+
+  font-size:12px;
+
+  padding:8px;
+
+}
+
+
+}

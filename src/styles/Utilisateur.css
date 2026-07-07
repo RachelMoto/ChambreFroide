@@ -92,3 +92,240 @@
   background: #6b7280;
   color: white;
 }
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media(max-width:1024px){
+
+
+.users-container{
+
+    padding:15px;
+
+}
+
+
+.users-form{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+
+.user-card{
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+
+.user-actions{
+
+    width:100%;
+
+}
+
+
+
+}
+
+
+
+/* =========================
+   TELEPHONE
+========================= */
+
+@media(max-width:768px){
+
+
+.users-container{
+
+    padding:10px;
+
+}
+
+
+
+/* Titre */
+
+.users-title{
+
+    font-size:20px;
+
+}
+
+
+
+/* Formulaire */
+
+.users-form{
+
+    grid-template-columns:1fr;
+
+    padding:15px;
+
+}
+
+
+
+.users-form input,
+.users-form select{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+}
+
+
+
+.users-form button{
+
+    grid-column:auto;
+
+    width:100%;
+
+}
+
+
+
+/* Liste */
+
+.users-list{
+
+    gap:15px;
+
+}
+
+
+
+.user-card{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    padding:15px;
+
+}
+
+
+
+/* Informations utilisateur */
+
+.user-info{
+
+    width:100%;
+
+}
+
+
+
+.user-info p{
+
+    font-size:14px;
+
+}
+
+
+
+/* Actions */
+
+.user-actions{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    width:100%;
+
+    gap:8px;
+
+}
+
+
+
+.user-actions button{
+
+    margin-left:0;
+
+    width:100%;
+
+    padding:10px;
+
+}
+
+
+
+}
+
+
+
+/* =========================
+   PETITS TELEPHONES
+========================= */
+
+@media(max-width:480px){
+
+
+.users-container{
+
+    padding:8px;
+
+}
+
+
+
+.users-title{
+
+    font-size:18px;
+
+}
+
+
+
+.users-form{
+
+    padding:12px;
+
+}
+
+
+
+.user-card{
+
+    padding:12px;
+
+}
+
+
+
+.user-info p{
+
+    font-size:13px;
+
+}
+
+
+
+.user-actions{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.user-actions button{
+
+    font-size:13px;
+
+}
+
+
+
+}

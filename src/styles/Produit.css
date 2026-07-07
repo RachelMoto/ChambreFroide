@@ -415,3 +415,269 @@ tbody tr:hover {
   background: #ddd;
   border-radius: 12px;
 }
+
+/* ================================
+   RESPONSIVE TABLETTE
+================================ */
+
+@media (max-width: 1024px) {
+
+  .page-container {
+    padding: 20px;
+  }
+
+
+  /* Cards statistiques */
+  .stats-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* Formulaire */
+  .form-produit {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+  .liste-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+
+  .actions {
+    width: 100%;
+  }
+
+
+  .actions input {
+    width: 100%;
+  }
+
+
+  .button-action {
+    flex-wrap: wrap;
+  }
+
+
+  .button-edit,
+  .button-reactiver,
+  .button-delete {
+    width: 45%;
+  }
+
+}
+
+
+/* ================================
+   RESPONSIVE TELEPHONE
+================================ */
+
+@media (max-width:768px) {
+
+
+  .page-container {
+    padding: 12px;
+  }
+
+
+  .page-container h1 {
+
+    font-size:24px;
+
+  }
+
+
+  /* Cards */
+  .stats-cards {
+
+    grid-template-columns:1fr;
+    gap:15px;
+
+  }
+
+
+  .card {
+
+    padding:15px;
+
+  }
+
+
+  .card span {
+
+    font-size:26px;
+
+  }
+
+
+
+  /* Header liste */
+
+  .liste-header {
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+  }
+
+
+  .actions {
+
+    flex-direction:column;
+
+    width:100%;
+
+  }
+
+
+  .actions input {
+
+    width:100%;
+
+  }
+
+
+
+  /* Tableau */
+
+  .produits-section {
+
+    padding:10px;
+
+    overflow-x:auto;
+
+  }
+
+
+  table,
+  .produits-table {
+
+    min-width:700px;
+
+  }
+
+
+
+  /* Formulaire ajout produit */
+
+  .form-produit {
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  .form-produit input,
+  .form-produit button {
+
+    width:100%;
+
+  }
+
+
+
+  /* Formulaire modification */
+
+  .edit-form {
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+  }
+
+
+  .edit-form input {
+
+    width:100%;
+
+  }
+
+
+  .edit-form button {
+
+    width:100%;
+
+  }
+
+
+
+  /* Boutons actions */
+
+  .button-action {
+
+    flex-direction:column;
+
+  }
+
+
+  .button-edit,
+  .button-reactiver,
+  .button-delete {
+
+    width:100%;
+
+  }
+
+
+}
+
+
+
+/* ================================
+   PETITS TELEPHONES
+================================ */
+
+@media (max-width:480px) {
+
+
+  .produits-header h1 {
+
+    font-size:22px;
+
+  }
+
+
+  .produits-header p {
+
+    font-size:14px;
+
+  }
+
+
+  .card h3 {
+
+    font-size:14px;
+
+  }
+
+
+  .card span {
+
+    font-size:22px;
+
+  }
+
+
+  .delete-btn,
+  .edit-btn {
+
+    padding:8px;
+
+    font-size:12px;
+
+  }
+
+
+  .form-produit {
+
+    gap:8px;
+
+  }
+
+
+}

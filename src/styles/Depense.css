@@ -202,3 +202,317 @@ td {
   background:#0c5adb;
   color:white;
 }
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media(max-width:1024px){
+
+
+.depense-container{
+
+  padding:15px;
+
+}
+
+
+/* Formulaire */
+
+.depense-form{
+
+  grid-template-columns:repeat(3,1fr);
+
+}
+
+
+
+/* Cards */
+
+.stats-cards{
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+/* Section */
+
+.depense-section{
+
+  padding:15px;
+
+}
+
+
+
+}
+
+
+
+/* =========================
+   TELEPHONE
+========================= */
+
+@media(max-width:768px){
+
+
+.depense-container{
+
+  padding:10px;
+
+}
+
+
+
+/* Header */
+
+.depense-header h1{
+
+  font-size:23px;
+
+}
+
+
+.depense-header p{
+
+  font-size:14px;
+
+}
+
+
+
+/* Formulaire */
+
+.depense-form{
+
+  grid-template-columns:1fr;
+
+  gap:10px;
+
+}
+
+
+
+.depense-form input,
+.depense-form button{
+
+  width:100%;
+
+  box-sizing:border-box;
+
+}
+
+
+
+.depense-form button{
+
+  padding:12px;
+
+}
+
+
+
+/* Total */
+
+.depense-total{
+
+  width:100%;
+
+  box-sizing:border-box;
+
+  font-size:18px;
+
+  text-align:center;
+
+}
+
+
+
+/* Cards */
+
+.stats-cards{
+
+  display:grid;
+
+  grid-template-columns:1fr;
+
+  gap:15px;
+
+}
+
+
+
+.stats-cards .card{
+
+  padding:18px;
+
+}
+
+
+
+.stats-cards .card p{
+
+  font-size:22px;
+
+}
+
+
+
+/* Section */
+
+.depense-section{
+
+  margin-top:20px;
+
+  padding:12px;
+
+}
+
+
+
+/* Filtres */
+
+.periode-filter{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:8px;
+
+}
+
+
+
+.periode-filter button{
+
+  width:100%;
+
+  padding:9px;
+
+  font-size:13px;
+
+}
+
+
+
+/* Tableau */
+
+.depense-section{
+
+  overflow-x:auto;
+
+}
+
+
+
+.depense-table{
+
+  min-width:650px;
+
+}
+
+
+
+.depense-table th,
+.depense-table td{
+
+  padding:10px;
+
+  font-size:14px;
+
+}
+
+
+
+}
+
+
+
+/* =========================
+   PETITS TELEPHONES
+========================= */
+
+@media(max-width:480px){
+
+
+.depense-container{
+
+  padding:8px;
+
+}
+
+
+
+.depense-header h1{
+
+  font-size:20px;
+
+}
+
+
+
+.depense-total{
+
+  font-size:16px;
+
+  padding:15px;
+
+}
+
+
+
+/* Filtres */
+
+.periode-filter{
+
+  grid-template-columns:1fr;
+
+}
+
+
+
+.periode-filter button{
+
+  font-size:12px;
+
+}
+
+
+
+/* Cards */
+
+.stats-cards .card h3{
+
+  font-size:14px;
+
+}
+
+
+
+.stats-cards .card p{
+
+  font-size:20px;
+
+}
+
+
+
+/* Tableau */
+
+.depense-table th,
+.depense-table td{
+
+  padding:8px;
+
+  font-size:12px;
+
+}
+
+
+
+}

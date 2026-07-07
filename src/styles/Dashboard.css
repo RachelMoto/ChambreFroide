@@ -4,15 +4,18 @@
   min-height: 100vh;
 }
 
-.dashboard-container button{
+/* Boutons */
+.dashboard-container button {
   background: #2563eb;
   cursor: pointer;
   color: #fff;
-  width: bold;
+  font-weight: bold;
   border-radius: 5px;
   border: none;
+  padding: 10px 15px;
 }
 
+/* Header */
 .dashboard-header {
   margin-bottom: 30px;
 }
@@ -28,6 +31,7 @@
   font-size: 15px;
 }
 
+/* Cards */
 .dashboard-cards {
   display: grid;
   grid-template-columns: repeat(
@@ -41,20 +45,27 @@
   background: white;
   border-radius: 15px;
   padding: 20px;
+
   display: flex;
   align-items: center;
   gap: 20px;
-  box-shadow: 0 2px 12px
-    rgba(0, 0, 0, 0.08);
+
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+
   transition: 0.3s;
+
   border-top: 5px solid #2563eb;
   border-left: 5px solid #111827;
+
+  cursor: pointer;
 }
 
 .dashboard-card:hover {
   transform: translateY(-4px);
 }
 
+
+/* Icon */
 .card-icon {
   width: 60px;
   height: 60px;
@@ -70,7 +81,10 @@
   color: #2563eb;
 
   font-size: 26px;
+
+  flex-shrink: 0;
 }
+
 
 .dashboard-card h3 {
   font-size: 14px;
@@ -84,84 +98,243 @@
   color: #111827;
 }
 
-@media (max-width: 768px) {
-  .dashboard-card {
-    flex-direction: column;
-    text-align: center;
-  }
+
+/* Graphiques */
+.dashboard-charts {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  margin-top:30px;
 }
 
+
+.chart-container {
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+
+.chart-container h2 {
+  text-align:center;
+  margin-bottom:20px;
+  color:#1f2937;
+  font-size:20px;
+  font-weight:600;
+}
+
+
+/* Modal */
 .modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.4);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position:fixed;
 
-  z-index: 1000;
+  inset:0;
+
+  background:rgba(0,0,0,.4);
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  z-index:1000;
+
+  padding:20px;
 }
+
 
 .modal-content {
-  width: 500px;
-  max-height: 80vh;
-  overflow-y: auto;
 
-  background: white;
-  border-radius: 15px;
+  width:500px;
 
-  padding: 25px;
+  max-width:100%;
+
+  max-height:80vh;
+
+  overflow-y:auto;
+
+  background:white;
+
+  border-radius:15px;
+
+  padding:25px;
+
 }
 
-.detail-row {
-  display: flex;
-  justify-content: space-between;
 
-  margin: 12px 0;
-}
-
+.detail-row,
 .detail-total {
-  display: flex;
-  justify-content: space-between;
 
-  margin-top: 20px;
+  display:flex;
 
-  font-size: 18px;
-  font-weight: bold;
+  justify-content:space-between;
+
+  gap:10px;
+
+  margin:12px 0;
+
 }
+
+
+/* ==========================
+   TABLETTES
+========================== */
+
+@media (max-width: 1024px) {
+
+
+.dashboard-container {
+  padding:15px;
+}
+
+
+.dashboard-header h1 {
+  font-size:28px;
+}
+
+
+.dashboard-charts {
+
+  grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+/* ==========================
+   TELEPHONES
+========================== */
+
+@media (max-width:768px) {
+
 
 .dashboard-card {
-  cursor: pointer;
+
+  flex-direction:column;
+
+  text-align:center;
+
+  padding:18px;
+
 }
 
-.dashboard-charts{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-    margin-top:30px;
+
+.card-icon {
+
+  width:55px;
+
+  height:55px;
+
 }
 
-.chart-container{
-    background:#fff;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+.dashboard-card p {
+
+  font-size:20px;
+
 }
 
-.chart-container h2{
-    text-align:center;
-    margin-bottom:20px;
-    color:#1f2937;
-    font-size:20px;
-    font-weight:600;
+
+.dashboard-header h1 {
+
+  font-size:24px;
+
 }
 
-@media(max-width:900px){
 
-.dashboard-charts{
+.dashboard-header p {
 
-grid-template-columns:1fr;
+  font-size:14px;
+
+}
+
+
+.chart-container {
+
+  padding:15px;
+
+}
+
+
+.chart-container h2 {
+
+  font-size:18px;
+
+}
+
+
+}
+
+
+/* ==========================
+   PETITS TELEPHONES
+========================== */
+
+@media (max-width:480px) {
+
+
+.dashboard-container {
+
+  padding:10px;
+
+}
+
+
+.dashboard-cards {
+
+  grid-template-columns:1fr;
+
+}
+
+
+.dashboard-card {
+
+  gap:10px;
+
+}
+
+
+.dashboard-card h3 {
+
+  font-size:13px;
+
+}
+
+
+.dashboard-card p {
+
+  font-size:18px;
+
+}
+
+
+.modal-content {
+
+  padding:15px;
+
+  border-radius:10px;
+
+}
+
+
+.detail-row,
+.detail-total {
+
+  flex-direction:column;
+
+  align-items:flex-start;
+
+}
+
+
+.dashboard-container button {
+
+  width:100%;
 
 }
 

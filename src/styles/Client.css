@@ -154,4 +154,203 @@ tbody tr:hover {
   border-radius: 12px;
 }
 
+/* =================================
+   TABLETTE
+================================= */
+
+@media(max-width:1024px){
+
+
+.page-container{
+
+  padding:15px;
+
+}
+
+
+.stats-cards{
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:20px;
+
+}
+
+
+
+.client-section{
+
+  padding:15px;
+
+}
+
+
+
+}
+
+
+
+/* =================================
+   TELEPHONE
+================================= */
+
+@media(max-width:768px){
+
+
+.page-container{
+
+  padding:10px;
+
+}
+
+
+
+/* Header */
+
+.clients-header h1,
+.client-header h2{
+
+  font-size:22px;
+
+}
+
+
+.clients-header p,
+.client-header p{
+
+  font-size:14px;
+
+}
+
+
+
+/* Cartes statistiques */
+
+.stats-cards{
+
+  grid-template-columns:1fr;
+
+  gap:15px;
+
+}
+
+
+.card,
+.stats-cards .client-card{
+
+  min-width:auto;
+
+  padding:18px;
+
+}
+
+
+.card span{
+
+  font-size:24px;
+
+}
+
+
+
+/* Section tableau */
+
+.client-section{
+
+  margin-top:20px;
+
+  padding:12px;
+
+  overflow-x:auto;
+
+}
+
+
+/* Tableau */
+
+.client-table{
+
+  min-width:650px;
+
+}
+
+
+
+.client-table th,
+.client-table td{
+
+  padding:10px;
+
+  font-size:14px;
+
+}
+
+
+
+}
+
+
+
+/* =================================
+   PETITS TELEPHONES
+================================= */
+
+@media(max-width:480px){
+
+
+.page-container{
+
+  padding:8px;
+
+}
+
+
+
+.clients-header h1,
+.client-header h2{
+
+  font-size:20px;
+
+}
+
+
+
+.card h3{
+
+  font-size:13px;
+
+}
+
+
+.card span{
+
+  font-size:22px;
+
+}
+
+
+
+.client-section{
+
+  border-radius:8px;
+
+}
+
+
+
+.client-table th,
+.client-table td{
+
+  padding:8px;
+
+  font-size:12px;
+
+}
+
+
+
+}
+
 
